@@ -1,0 +1,205 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f7;
+    color: #252525;
+    min-height: 100vh;
+    padding: 50px 24px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CREATE / EDIT FORM */
+.note-form {
+    width: 100%;
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e9e9e7;
+    border-radius: 12px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.note-form h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    color: #252525;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #888;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.note-form button {
+    align-self: flex-start;
+    padding: 11px 23px;
+    background: #252525;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.note-form button:hover {
+    background: #444;
+}
+
+/* NOTES */
+.card {
+    background: #fff;
+    padding: 25px 27px;
+    border: 1px solid #eaeae8;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #777;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* ACTION BUTTONS */
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-group a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-group a:first-child {
+    color: #2563eb;
+}
+
+.button-group a:last-child {
+    color: #555;
+}
+
+.button-group form {
+    margin: 0;
+}
+
+.button-group button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #dc4040;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-group a:hover,
+.button-group button:hover {
+    text-decoration: underline;
+}
+
+/* READ PAGE */
+.read-card {
+    max-width: 750px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 35px;
+    background: #fff;
+    border: 1px solid #eaeae8;
+    border-radius: 12px;
+}
+
+.read-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+}
+
+.read-description {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .note-form {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .button-group {
+        gap: 16px;
+    }
+
+    .read-card {
+        padding: 23px;
+    }
+
+    .read-title {
+        font-size: 23px;
+    }
+}

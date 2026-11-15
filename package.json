@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "fatima shaikh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "npm start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  }
+}

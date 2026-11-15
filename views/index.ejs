@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <form method="post" action="/create" class="note-form">
+            <h2>Create Note</h2>
+
+            <input type="text" placeholder="Enter the title of the file" name="title" required>
+
+            <textarea placeholder="Enter the description" value="description" name="description" required></textarea>
+
+            <button type="submit" class="button-group" >Submit</button>
+        </form>
+
+        <% if (file.length>0) { %>
+            <% file.forEach(element => { %>
+             <div class="card">
+            <h2><%= element.title %></h2>
+            <p><%= element.description %></p>
+            <div id="button">
+                <a href='/read/<%= element.title %>'>Read more</a>
+                <form action="/delete/<%= element.title %>" method="post" class="button-group">
+                    <button type="submit" >Delete</button>
+                </form>
+                <a href="/edit/<%=element.title%>">Edit</a>
+            </div>
+            </div>
+            <% }) %>
+        <% } %>
+    </div>
+
+</body>
+</html>

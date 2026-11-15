@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit part</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form method="post" action="/edit" class="note-form">
+            <h2>Create Note</h2>
+
+            <input type="text" placeholder="Enter the title of the file" value="<%= filename %>" name="title">
+
+            <textarea placeholder="Enter the description" name="description"><%= description %></textarea>
+
+            <button type="submit" class="button-group" >Submit</button>
+        </form>
+</body>
+</html>
